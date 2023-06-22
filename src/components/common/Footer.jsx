@@ -1,9 +1,8 @@
-import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            Esto es el footer
+        <div className='p-5 bg-dark text-white text-center'>
+            <h3>Recetas de cocina por Silvio</h3>
         </div>
     );
 };
