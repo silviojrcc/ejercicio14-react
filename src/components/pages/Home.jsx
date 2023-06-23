@@ -1,6 +1,7 @@
 import Menu from '../common/Menu.jsx';
 import Footer from "../common/Footer.jsx";
 import RecetasList from './receta/RecetasList.jsx';
+import CrearReceta from './receta/CrearReceta.jsx';
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
           <Menu></Menu>
           <RecetasList/>
           <Footer></Footer>
+          <CrearReceta/>
         </>
     );
 };
