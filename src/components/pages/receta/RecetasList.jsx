@@ -11,6 +11,7 @@ const RecetasList = () => {
     useEffect(() => {
         obtenerRecetas().then((respuesta) => {
             if(respuesta){
+                console.log(respuesta);
                 setRecetas(respuesta);
             } else {
                Swal.fire("Oops...", "No hay recetas registradas", "error"); 
@@ -21,7 +22,7 @@ const RecetasList = () => {
 
     return (
         <Container className={`rounded border border-dark p-3 my-5`}>
-            {/* <h4 className='text-light text-center'> {peliculas.length >= 1 ? "Películas" : "No hay películas retgistradas"}</h4> */}
+            <h4 className='text-center'> {recetas.length >= 1 ? "Recetas" : "No hay recetas retgistradas"}</h4>
             <div className='d-flex row justify-content-around mt-4'>
                 {recetas.map((receta) => (
                     <CardReceta key={receta.id} receta={receta} />
