@@ -1,26 +1,34 @@
-import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import CardReceta from './CardReceta';
 import { Container } from 'react-bootstrap';
+import { obtenerRecetas } from '../../helpers/queries';
+import Swal from "sweetalert2";
 
-const RecetasList = props => {
+const RecetasList = () => {
+
+    const [recetas, setRecetas] = useState([]);
+
+    useEffect(() => {
+        obtenerRecetas().then((respuesta) => {
+            if(respuesta){
+                setRecetas(respuesta);
+            } else {
+               Swal.fire("Oops...", "No hay recetas registradas", "error"); 
+               setRecetas([]);
+            }
+        })
+    }, []);
+
     return (
         <Container className={`rounded border border-dark p-3 my-5`}>
             {/* <h4 className='text-light text-center'> {peliculas.length >= 1 ? "Películas" : "No hay películas retgistradas"}</h4> */}
             <div className='d-flex row justify-content-around mt-4'>
-                {/* {peliculas.map((pelicula, index) => <Pelicula pelicula={pelicula} key={index} borrarPelicula={borrarPelicula}></Pelicula>)} */}
-                <CardReceta/>
-                <CardReceta/>
-                <CardReceta/>
-                <CardReceta/>
-                <CardReceta/>
-                <CardReceta/>
+                {recetas.map((receta) => (
+                    <CardReceta key={receta.id} receta={receta} />
+                ))}
             </div>
         </Container>
     );
-};
-
-RecetasList.propTypes = {
-
 };
 
 export default RecetasList;
