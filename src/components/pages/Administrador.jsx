@@ -1,12 +1,31 @@
-import { Container, Button, Table } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import RecetaListItem from './receta/RecetaListItem';
+import { useState, useEffect } from 'react';
+import { obtenerRecetas } from '../helpers/queries';
+import Swal from 'sweetalert2';
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
+
+    const [recetas, setRecetas] = useState([]);
+
+    useEffect(() => {
+        obtenerRecetas().then((respuesta) => {
+            if(respuesta){
+                console.log(respuesta);
+                setRecetas(respuesta);
+            } else {
+               Swal.fire("Oops...", "No hay recetas registradas", "error"); 
+               setRecetas([]);
+            }
+        })
+    }, []);
+
     return (
         <Container className='main'>
             <div>
                 <h1>Recetas cargadas</h1>
-                <Button>Agregar receta</Button>
+                <Link className="btn btn-primary" to='/administrador/crear-receta'>Agregar receta</Link>
             </div>
             <hr />
             <Table responsive striped bordered hover>
@@ -19,12 +38,9 @@ const Administrador = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <RecetaListItem/>
-                    <RecetaListItem/>
-                    <RecetaListItem/>
-                    <RecetaListItem/>
-                    <RecetaListItem/>
-                    <RecetaListItem/>
+                    {recetas.map((receta) => (
+                        <RecetaListItem key={receta.id} receta={receta} />
+                    ))}
                 </tbody>
             </Table>
         </Container>
