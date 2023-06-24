@@ -1,5 +1,5 @@
 import error from "../../assets/Error404.jpg";
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Error404 = () => {
     return (
@@ -7,7 +7,7 @@ const Error404 = () => {
             <img className="w-50" src={error} alt="error 404" />
             <p>Cuando le pedís a la IA que cree una imagen de error 404</p>
             <div>
-                <Button>Regresar a la página principal</Button>
+                <Link to="/" className="btn btn-primary">Regresar a la página principal</Link>
             </div>
         </section>
     );

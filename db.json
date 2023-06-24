@@ -10,6 +10,25 @@
         "asdasdasdasdasdasd"
       ],
       "id": 1
+    },
+    {
+      "nombreReceta": "Cafe con leche",
+      "descripcionReceta": "Una receta para combatir el frío con el mejor café con leche que te puedas encontrar.",
+      "ingredientesReceta": [
+        "Café",
+        " leche",
+        " taza",
+        " azucar",
+        " cuchara"
+      ],
+      "pasosReceta": [
+        "poner el cafe en la taza",
+        "agregar un poquito de leche y mezclar",
+        "agregar el azucar",
+        "mezclar mas con la cuchara",
+        "tomarlo"
+      ],
+      "id": 2
     }
   ],
   "usuarios": [

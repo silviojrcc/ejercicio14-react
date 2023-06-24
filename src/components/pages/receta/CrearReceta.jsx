@@ -108,7 +108,7 @@ const CrearReceta = () => {
                             }
                         })}/>
                     <Form.Text className="text-danger">
-                        error
+                        {errors.pasosReceta?.message}
                     </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formImagen">
@@ -116,9 +116,12 @@ const CrearReceta = () => {
                     <Form.Control
                         type="text"
                         placeholder="Ingrese la url de una imagen"
+                        {...register("imagenReceta", {
+                            required: "Debe ingresar la imagen de la receta",
+                        })}
                     />
                     <Form.Text className="text-danger">
-                        error
+                        {errors.imagenReceta?.message}
                     </Form.Text>
                 </Form.Group>
                 <Button variant="primary" type="submit">
