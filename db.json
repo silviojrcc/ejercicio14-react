@@ -29,6 +29,27 @@
         "tomarlo"
       ],
       "id": 2
+    },
+    {
+      "nombreReceta": "una receta",
+      "descripcionReceta": "esta es una receta muy loca que hace recetas",
+      "ingredientesReceta": [
+        "jamon",
+        " tomate",
+        " lechuga",
+        " pan",
+        " carne"
+      ],
+      "pasosReceta": [
+        "partir el pan",
+        "meter el jamon en medio",
+        "cortar la lechuga y meterla adentro del pan",
+        "colorcar la carne",
+        "ponerle tomate ",
+        "cerrar el pan"
+      ],
+      "imagenReceta": "imagen loca",
+      "id": 3
     }
   ],
   "usuarios": [

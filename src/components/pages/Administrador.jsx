@@ -12,7 +12,6 @@ const Administrador = () => {
     useEffect(() => {
         obtenerRecetas().then((respuesta) => {
             if(respuesta){
-                console.log(respuesta);
                 setRecetas(respuesta);
             } else {
                Swal.fire("Oops...", "No hay recetas registradas", "error"); 
