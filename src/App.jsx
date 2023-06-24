@@ -1,15 +1,11 @@
 import './App.css';
-import Home from './components/pages/Home';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menu from './components/common/Menu';
-import Login from "./components/pages/Login";
-import DetalleReceta from './components/pages/DetalleReceta';
-import RutasProtegidas from './components/routes/RutasProtegidas';
-import RutasAdministrador from './components/routes/RutasAdministrador';
+import { Menu, Footer } from "./components/common";
+import { Login, DetalleReceta, Error404, Home } from "./components/pages";
+import { RutasAdministrador, RutasProtegidas } from './components/routes';
 import { useState } from 'react';
-import Error404 from './components/pages/Error404';
-import Footer from "./components/common/Footer";
+
 
 function App() {
   const usuario = JSON.parse(sessionStorage.getItem('usuario')) || {}
