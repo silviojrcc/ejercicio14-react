@@ -3,10 +3,11 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { login } from "../helpers/queries";
+import PropTypes from 'prop-types';
 
 const Login = ({ setUsuarioLogueado }) => {
 
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const navegacion = useNavigate();
 
     const onSubmit = (usuario) => {
@@ -80,3 +81,7 @@ const Login = ({ setUsuarioLogueado }) => {
 };
 
 export default Login;
+
+Login.propTypes = {
+    setUsuarioLogueado: PropTypes.func.isRequired
+}

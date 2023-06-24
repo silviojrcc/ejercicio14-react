@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const CardReceta = ({receta}) => {
@@ -18,7 +18,7 @@ const CardReceta = ({receta}) => {
 };
 
 CardReceta.propTypes = {
-
+    receta: PropTypes.object.isRequired,
 };
 
 export default CardReceta;

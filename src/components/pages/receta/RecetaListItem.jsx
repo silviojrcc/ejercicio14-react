@@ -37,7 +37,8 @@ const RecetaListItem = ({receta, setRecetas}) => {
 };
 
 RecetaListItem.propTypes = {
-    
+    receta: PropTypes.object.isRequired,
+    setRecetas: PropTypes.func.isRequired
 };
 
 export default RecetaListItem;
