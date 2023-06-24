@@ -26,7 +26,7 @@ const RecetasList = () => {
             {recetas.length >= 1 && (
                 <div className='d-flex row justify-content-around mt-4'>
                     {recetas.map((receta) => (
-                        <CardReceta key={receta.id} receta={receta} />
+                        <CardReceta key={receta.id} receta={receta} setRecetas={setRecetas} />
                     ))}
                 </div>
             )}

@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} />} />
-          <Route path="/detalle" element={<DetalleReceta></DetalleReceta>} />
+          <Route path="/detalle/:id" element={<DetalleReceta></DetalleReceta>} />
           <Route path="/administrador/*" element={
             <RutasProtegidas>
               <RutasAdministrador />

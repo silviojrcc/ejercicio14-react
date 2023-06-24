@@ -11,6 +11,16 @@ export const obtenerRecetas = async () => {
     }
 }
 
+export const obtenerReceta = async (id)=>{
+    try {
+        const respuesta = await fetch(URL_receta + "/" + id);
+        const receta = await respuesta.json();
+        return receta;
+    }catch(error){
+        console.log(error)
+    }
+}
+
 export const crearReceta = async (receta) => {
     try {
         const respuesta = await fetch(URL_receta, {
@@ -22,6 +32,17 @@ export const crearReceta = async (receta) => {
         });
         return respuesta;
     } catch (error) {
+        console.log(error)
+    }
+}
+
+export const borrarReceta = async (id)=>{
+    try {
+        const respuesta = await fetch(URL_receta + "/" + id, {
+            method: "DELETE",
+        });
+        return respuesta;
+    }catch(error){
         console.log(error)
     }
 }

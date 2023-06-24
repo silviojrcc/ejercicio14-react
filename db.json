@@ -1,55 +1,23 @@
 {
   "recetas": [
     {
-      "nombreReceta": "asdasdasdasdasd",
-      "descripcionReceta": "asdasdasdasdasd",
+      "nombreReceta": "Receta de Ñoquis",
+      "descripcionReceta": "Los clásicos, los básicos, los de siempre: los nobles ñoquis de papa. son los protagonistas de esta recetaza que siempre hay que tener. Ni de queso, ni de calabaza light, ni de es",
       "ingredientesReceta": [
-        "asdasdasdasdasdasd"
+        "1kg de papas",
+        " 350grs de harina",
+        " 1 huevo",
+        " sal y pimienta",
+        " nuez moscada a gusto"
       ],
       "pasosReceta": [
-        "asdasdasdasdasdasd"
+        "Poner las papas (peladas o lavadas con la piel) en una olla con agua fria y sal. Hervir y cocinar hasta que estén blandas.",
+        "Sacarla de la olla, pasarlas por agua fría, dejar en",
+        "",
+        ""
       ],
+      "imagenReceta": "https://www.lanacion.com.ar/resizer/ncLk4a0QwkMephTS5QVMQ4zCzIw=/1200x800/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/YKPWANKORBBHDNDAMWV6T2RGHY.jpg",
       "id": 1
-    },
-    {
-      "nombreReceta": "Cafe con leche",
-      "descripcionReceta": "Una receta para combatir el frío con el mejor café con leche que te puedas encontrar.",
-      "ingredientesReceta": [
-        "Café",
-        " leche",
-        " taza",
-        " azucar",
-        " cuchara"
-      ],
-      "pasosReceta": [
-        "poner el cafe en la taza",
-        "agregar un poquito de leche y mezclar",
-        "agregar el azucar",
-        "mezclar mas con la cuchara",
-        "tomarlo"
-      ],
-      "id": 2
-    },
-    {
-      "nombreReceta": "una receta",
-      "descripcionReceta": "esta es una receta muy loca que hace recetas",
-      "ingredientesReceta": [
-        "jamon",
-        " tomate",
-        " lechuga",
-        " pan",
-        " carne"
-      ],
-      "pasosReceta": [
-        "partir el pan",
-        "meter el jamon en medio",
-        "cortar la lechuga y meterla adentro del pan",
-        "colorcar la carne",
-        "ponerle tomate ",
-        "cerrar el pan"
-      ],
-      "imagenReceta": "imagen loca",
-      "id": 3
     }
   ],
   "usuarios": [
