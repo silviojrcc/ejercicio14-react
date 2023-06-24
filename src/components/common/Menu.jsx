@@ -11,6 +11,7 @@ const Menu = ({usuarioLogueado, setUsuarioLogueado}) => {
         navegacion('/');
     }
 
+    console.log(usuarioLogueado);
 
     return (
         <Navbar className="p-3" bg="dark" variant="dark" expand="lg">
